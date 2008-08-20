@@ -1418,7 +1418,7 @@ end
 class Hash
   
   def to_params
-    map { |k,v| "#{k}=#{URI.escape(v)}" }.join('&')
+    map { |k,v| "#{k}=#{Rack::Utils.escape(v)}" }.join('&')
   end
   
   def symbolize_keys
