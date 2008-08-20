@@ -415,9 +415,9 @@ also works with:
   require 'my_sinatra_app'
   require 'sinatra/test/spec'
 
-  context 'My app'
+  describe 'My app'
   
-    should "show a default page" do
+    it "should show a default page" do
       get_it '/'
       should.be.ok
       body.should.equal 'My Default Page!'
@@ -425,7 +425,9 @@ also works with:
     ...
   
   end
-  
+
+Note: Requires the test-spec gem.
+
 == Test helpers
 
 See Sinatra::Test::Methods
